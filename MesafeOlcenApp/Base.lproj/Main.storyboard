@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="MesafeOlcenApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zwP-Ta-WzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GU1-Ct-2xP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfM-N8-nFm">
+                                <rect key="frame" x="15.5" y="614" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.95632725067185553" green="0.96530529306852331" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="ilk Nokta"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="JBJ-O9-4aA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPm-UF-PqG">
+                                <rect key="frame" x="162" y="582" width="52" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-ua-Ksi">
+                                <rect key="frame" x="179.5" y="312" width="17.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.10267732471086888" green="1" blue="0.16256998047567328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cbC-ua-Ksi" firstAttribute="centerY" secondItem="zwP-Ta-WzQ" secondAttribute="centerY" id="0tx-ne-TrK"/>
+                            <constraint firstItem="BfM-N8-nFm" firstAttribute="width" secondItem="GU1-Ct-2xP" secondAttribute="width" constant="-32" id="2aH-zl-Y8U"/>
+                            <constraint firstItem="WAI-nG-OmG" firstAttribute="bottom" secondItem="GU1-Ct-2xP" secondAttribute="bottom" id="7eX-oo-DFV"/>
+                            <constraint firstItem="GU1-Ct-2xP" firstAttribute="top" secondItem="zwP-Ta-WzQ" secondAttribute="top" id="Jej-bu-WqA"/>
+                            <constraint firstItem="cbC-ua-Ksi" firstAttribute="centerX" secondItem="zwP-Ta-WzQ" secondAttribute="centerX" id="Wo3-sa-1vl"/>
+                            <constraint firstItem="BfM-N8-nFm" firstAttribute="top" secondItem="XPm-UF-PqG" secondAttribute="bottom" constant="8" id="l0R-Sn-DM0"/>
+                            <constraint firstItem="BfM-N8-nFm" firstAttribute="centerX" secondItem="zwP-Ta-WzQ" secondAttribute="centerX" id="mSl-1E-wJn"/>
+                            <constraint firstItem="XPm-UF-PqG" firstAttribute="centerX" secondItem="zwP-Ta-WzQ" secondAttribute="centerX" id="pCJ-p7-cCd"/>
+                            <constraint firstItem="WAI-nG-OmG" firstAttribute="bottom" secondItem="BfM-N8-nFm" secondAttribute="bottom" constant="20" id="sdN-7M-a6i"/>
+                            <constraint firstItem="GU1-Ct-2xP" firstAttribute="leading" secondItem="WAI-nG-OmG" secondAttribute="leading" id="vdC-zl-oAN"/>
+                            <constraint firstItem="WAI-nG-OmG" firstAttribute="trailing" secondItem="GU1-Ct-2xP" secondAttribute="trailing" id="xkc-eK-4zC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WAI-nG-OmG"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="BfM-N8-nFm" id="OrB-72-v5V"/>
+                        <outlet property="mesafeLabel" destination="XPm-UF-PqG" id="Ck7-sh-11c"/>
+                        <outlet property="sceneView" destination="GU1-Ct-2xP" id="7Xx-V9-4jd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
