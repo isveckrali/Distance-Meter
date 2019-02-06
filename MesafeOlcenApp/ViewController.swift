@@ -13,10 +13,8 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    
     @IBOutlet var mesafeLabel: UILabel!
     @IBOutlet var button: UIButton!
-    
     var firstDot: SCNNode?
     var secondDot : SCNNode?
     
@@ -37,10 +35,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             secondDot?.removeFromParentNode()
             firstDot = nil
             secondDot = nil
-        }
-        
+        }    
     }
+    
     func createDot() -> SCNNode? {
+        
         let userTouch = sceneView.center
         let results = sceneView.hitTest(userTouch, types: .featurePoint)
         if let resultOne = results.first {
@@ -48,13 +47,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let materail = SCNMaterial()
             materail.diffuse.contents = UIColor.red
             dot.firstMaterial = materail
-            
             let dotNode = SCNNode(geometry: dot)
             dotNode.position = SCNVector3(resultOne.worldTransform.columns.3.x, resultOne.worldTransform.columns.3.y, resultOne.worldTransform.columns.3.z)
             sceneView.scene.rootNode.addChildNode(dotNode)
             return dotNode
         }
         return nil
+        
     }
     
     func mesafeyiHesapla()  -> String {
@@ -66,6 +65,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
         return ""
+        
     }
     
     override func viewDidLoad() {
@@ -79,7 +79,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         button.layer.cornerRadius = 5
         button.layer.masksToBounds = true
         
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,6 +97,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+        
     }
-
 }
