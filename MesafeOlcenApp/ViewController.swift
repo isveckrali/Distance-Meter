@@ -15,6 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet var mesafeLabel: UILabel!
     @IBOutlet var button: UIButton!
+    
     var firstDot: SCNNode?
     var secondDot : SCNNode?
     
