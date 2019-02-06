@@ -17,7 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var button: UIButton!
     
     var firstDot: SCNNode?
-    var secondDot : SCNNode?
+    var secondDot: SCNNode?
     
     @IBAction func buttonAction(_ sender: Any) {
      
